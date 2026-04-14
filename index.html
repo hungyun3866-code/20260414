@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; overflow: hidden; background-color: #1a1a1a; }
+
+    .exhibit-group {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      width: 650px;
+      height: 420px;
+      z-index: 100;
+      will-change: transform;
+      transform: translate(-50%, -50%);
+    }
+
+    .art-frame {
+      width: 100%;
+      height: 100%;
+      border: 18px solid #d4af37;
+      background: #fff;
+      box-shadow: 0 50px 100px rgba(0,0,0,0.9);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .art-frame::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.5) 80%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    iframe { width: 100%; height: 100%; border: none; z-index: 1; }
+
+    .museum-label {
+      position: absolute;
+      bottom: -150px;
+      left: -20px;
+      background: #fdfdfd;
+      padding: 20px;
+      width: 240px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+      border-left: 10px solid #d4af37;
+      font-family: 'Noto Serif TC', serif;
+      z-index: 110;
+    }
+
+    .author { font-weight: bold; font-size: 20px; color: #111; }
+    .work-title { font-style: italic; font-size: 16px; color: #444; margin: 5px 0; }
+    .info { font-size: 13px; color: #888; border-top: 1px solid #eee; padding-top: 10px; }
+  </style>
+</head>
+<body>
+  <div id="group-week1" class="exhibit-group">
+    <div class="art-frame">
+      <iframe src="https://hungyun3866-code.github.io/week1/"></iframe>
+    </div>
+    <div class="museum-label">
+      <div class="author">洪千涵</div>
+      <div class="work-title">第一週：互動基礎練習</div>
+      <div class="info">2026 | 淡江教科系</div>
+    </div>
+  </div>
+
+  <div id="group-week2" class="exhibit-group">
+    <div class="art-frame">
+      <iframe src="https://hungyun3866-code.github.io/WEEK2new/"></iframe>
+    </div>
+    <div class="museum-label">
+      <div class="author">洪千涵</div>
+      <div class="work-title">第二週：進階作品展示</div>
+      <div class="info">2026 | 淡江教科系</div>
+    </div>
+  </div>
+
+  <div id="group-week3" class="exhibit-group">
+    <div class="art-frame">
+      <iframe src="https://hungyun3866-code.github.io/week3/"></iframe>
+    </div>
+    <div class="museum-label">
+      <div class="author">洪千涵</div>
+      <div class="work-title">第三週：創意互動延伸</div>
+      <div class="info">2026 | 淡江教科系</div>
+    </div>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
